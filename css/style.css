@@ -1,0 +1,585 @@
+/* 
+Project Name: Why eat vegan?
+Author: Christel
+Developer @christelkemp in Boston
+*/
+
+
+/******************************************
+/* SETUP                   
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right; 
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left; 
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+
+body {
+     font-size: 12px;
+     line-height: 1.4;
+     font-family: Helvetica, Arial, sans-serif;
+     background-color: #4abdac;
+    
+}
+
+/******************************************
+/* FONTS                    
+/*******************************************/
+@font-face { 
+     font-family: 'GandhiSans-Bold'
+     src: url('fonts/GandhiSans-Bold.otf');
+     font-weight: normal;
+     font-family: 'GandhiSans-BoldItalic'
+     src: url('fonts/GandhiSans-BoldItalic.otf');
+     font-family: 'GandhiSans-Italic'
+     src: url('fonts/GandhiSans-Italic.otf');
+     font-family: 'GandhiSans-Regular'
+     src: url('fonts/GandhiSans-Regular.otf');
+     font-family: 'Breathe-Regular'
+     src: url('fonts/Breathe-Regular.otf');
+} 
+
+
+
+/*First Section*/
+
+#h1 {
+     float: left;
+     width: 100%;
+     margin-top: 55px;
+     text-align: center;
+     font-family: 'Breathe-Regular';
+     font-size: 5em;
+     color: white;
+     -webkit-font-smoothing: antialiased;
+}
+
+#counter {
+     color: #f7b733;
+     font-size: 2em;
+     margin: 0 2.2%;
+     vertical-align: middle;
+}
+
+p {
+     text-align: center;
+     margin: auto;
+     color: white;
+     width: 47%;
+     -webkit-font-smoothing: antialiased;
+
+}
+
+p#intro {
+     margin-top: -40px;
+     font-family: 'GandhiSans-Regular';
+     font-size: 1.4em;
+}
+
+p#whatIf {
+     margin-top: 40px;
+     font-family: 'GandhiSans-Bold';
+     font-size: 1.7em;
+     vertical-align: middle;
+
+}
+
+
+
+#texture {
+     width: 100%;
+     margin: 0 auto;
+     overflow: hidden;
+     float: left;
+     background-image: url('../assets/texture.png');
+     background-repeat: no-repeat;
+}
+
+#title {
+     width: 100%;
+     height: 230px;
+     background-image: url('../assets/title.png');
+     background-position: center;
+     background-repeat: no-repeat;
+     margin: auto;
+}
+
+#vegan {
+     margin-left: 2.5%;
+}
+
+/*Second Section*/
+
+#bg {
+     width: 100%;
+     height: 160px;
+     background-color: #f4f4f4;
+     margin: auto;
+     border-radius: 20px 20px 0 0;
+}
+
+#container {
+     width: 53%;
+     height: 600px;
+     background-color: white;
+     margin: auto;
+     border-radius: 20px;
+     margin-top: 30px;
+     box-shadow: 0 0 10px 5px rgba(0,0,0,0.1)
+}
+
+.letters{
+     font-family: "GandhiSans-Bold";
+     color: #a0a0a0;
+     font-size: 1.5em;
+     -webkit-font-smoothing: antialiased;
+
+
+}
+
+p#select {
+     color: rgba(0,0,0,0.3);
+     font-family: 'GandhiSans-Regular';
+     -webkit-font-smoothing: antialiased;
+     padding-top: 15px;
+     font-size: 1.2em;
+}
+
+
+.weekDay {
+     width: 85px;
+     height: 85px;
+     background: #eae9e9;
+     -moz-border-radius: 50px;
+     -webkit-border-radius: 50px;
+     border-radius: 50px;
+     margin-left: 1%;
+     display: inline-block;
+     vertical-align: top;
+     padding-top: 31px;
+}
+
+.selected {
+     background-color: #fc4a1a;
+     background-image: url(../assets/check.png);
+     background-repeat: no-repeat;
+     background-position: center;
+}
+
+#outputText {
+     margin-top: 25px;
+     color: #7d7d7d;
+     font-family: 'GandhiSans-Italic';
+     font-size: 1.6em;
+
+}
+
+#mon {
+     visibility: hidden;
+}
+
+#week {
+     text-align: center;
+     margin-top: 18px;
+}
+
+.element {
+     margin-left: 10%;
+     margin-top: 35px;
+     overflow: hidden;
+     width: 40%;
+     float: left;
+}
+
+
+#waterImg {
+     background-image: url(../assets/water.png);
+     background-repeat: no-repeat;
+     height: 54px;
+     width: 40px;
+     display: inline-block;
+     float: left;
+     margin-top: 14px;
+     margin-right: 15%;
+
+}
+
+#grain {
+     margin-left: 3%;
+
+}
+
+#grainImg {
+     background-image: url(../assets/grain.png);
+     background-repeat: no-repeat;
+     height: 61px;
+     width: 24px;
+     display: inline-block;
+     float: left;
+     margin-top: 14px;
+     margin-right: 17%;
+
+}
+
+#land {
+     margin-left: 8%;
+}
+
+#landImg {
+     background-image: url(../assets/land.png);
+     background-repeat: no-repeat;
+     height: 75px;
+     width: 78px;
+     display: inline-block;
+     float: left;
+     margin-top: 14px;
+     margin-right: 9%;
+
+}
+
+#animalImg {
+     background-image: url(../assets/animal.png);
+     background-repeat: no-repeat;
+     height: 50px;
+     width: 52px;
+     display: inline-block;
+     float: left;
+     margin-top: 14px;
+     margin-right: 4.5%;
+
+}
+
+#animal {
+     width: 100%;
+}
+
+#co2 {
+     margin-left: 3%;
+}
+
+#co2Img {
+     background-image: url(../assets/co2.png);
+     background-repeat: no-repeat;
+     height: 43px;
+     width: 65px;
+     display: inline-block;
+     float: left;
+     margin-top: 14px;
+     margin-right: 9%;
+
+}
+
+.number {
+     float: left;
+     display: inline-block;
+     font-family: Helvetica Neue;
+     font-weight: bold;
+     font-size: 4em;
+     color: #fc4a1a;
+     -webkit-font-smoothing: antialiased;
+
+}
+
+.description {
+     color: rgba(0,0,0,0.5);
+     font-family: 'GandhiSans-Italic';
+     -webkit-font-smoothing: antialiased;
+     float: left;
+     text-align: left;
+     display: block;
+     font-size: 1.2em;
+     clear: both;
+     margin-top: -5px;
+     width: inherit;
+
+
+}
+
+.text {
+     overflow: hidden;
+}
+
+#grain {
+     float: left;
+}
+
+#final {
+     font-family: 'GandhiSans-Regular';
+     font-size: 1.4em;
+     margin-top: 50px;
+}
+
+#endTitle {
+     width: 100%;
+     height: 220px;
+     background-image: url('../assets/final.png');
+     background-repeat: no-repeat;
+     background-position: center;
+     margin-top: 30px;
+
+}
+
+#youCan {
+     font-family: 'GandhiSans-Regular';
+     font-size: 2.3em;
+     padding-top: 30px;
+}
+
+#today {
+     font-family: 'Breathe-Regular';
+     font-size:7.5em;
+     margin-top: -28px;
+}
+
+
+
+footer p {
+     font-family: 'GandhiSans-Regular';
+     margin-top: 60px;
+     margin-bottom: 40px;
+     clear: both;
+}
+
+
+
+#info {
+     width: 15px;
+     height: 15px;
+     background: rgba(255,255,255,1);
+     -moz-border-radius: 50px;
+     -webkit-border-radius: 50px;
+     font-family: 'GandhiSans-Bold';
+     -webkit-font-smoothing: antialiased;
+     border-radius: 50px;
+     color: #4abdac;
+     float: left;
+     margin-right: 1.2%;
+     text-align: center;
+}
+
+#source a {
+     text-decoration: none;
+     color: white;
+     margin: auto;
+     font-family: 'GandhiSans-Regular';
+     font-size: 1.3em;
+     -webkit-font-smoothing: antialiased;
+
+
+}
+
+#source {
+     overflow: hidden;
+     margin: auto;
+     margin-left: 47%;
+
+}
+
+@media (max-width: 1280px) {
+     .weekDay {
+          height: 75px;
+          width: 75px;
+          padding-top: 27px;
+     }
+}
+
+@media (max-width: 1106px) {
+     p {
+          width: 60%;
+     }
+
+     #container {
+          width: 60%;
+     }
+     .selected {
+          background-size: 18px;
+     }
+     .weekDay {
+          height: 65px;
+          width: 65px;
+          padding-top: 25px;
+     }
+
+     .letters {
+          font-size: 1.3em;
+     }
+
+     .element {
+          width: 100%;
+          margin-left: 27%;
+     }
+
+     #waterImg {
+     margin-right: 8%;
+     }
+     #grainImg {
+     margin-right: 8%;
+     }
+     #landImg {
+     margin-right: 8%;
+     }
+     #co2Img {
+     margin-right: 8%;
+     }
+     #animalImg {
+     margin-right: 8%;
+     }
+
+     #grain {
+          margin-left: 28%;
+     }
+
+     #land {
+          margin-left: 18%;
+     }
+
+     #co2 {
+          margin-left: 20%;
+     }
+     #animal {
+          margin-left: 21%;
+     }
+
+     #container {
+          height: 835px;
+     }
+}
+
+@media (max-width: 963px) {
+      p {
+          width: 70%;
+     }
+
+     #container {
+          width: 70%;
+     }
+     .weekDay {
+          height: 75px;
+          width: 75px;
+          padding-top: 28px;
+     }
+
+     .selected {
+          background-size: 15px;
+     }
+}
+
+@media (max-width: 836px) {
+      p {
+          width: 70%;
+     }
+
+     #container {
+          width: 80%;
+     }
+     .weekDay {
+          height: 65px;
+          width: 65px;
+          padding-top: 25px;
+     }
+
+     .selected {
+          background-size: 15px;
+     }
+}
+
+@media (max-width: 638px) {
+      p {
+          width: 70%;
+     }
+
+     #container {
+          width: 80%;
+     }
+     .weekDay {
+          height: 55px;
+          width: 55px;
+          padding-top: 20px;
+     }
+
+     .selected {
+          background-size: 15px;
+     }
+}
+
+@media (max-width: 544px) and (min-width: 400px)  {
+      p {
+          width: 90%;
+     }
+
+     #bg {
+          height: 210px;
+     }
+
+     #container {
+          width: 80%;
+          height: 880px;
+     }
+     .weekDay {
+          height: 55px;
+          width: 55px;
+          padding-top: 20px;
+          margin-bottom: 10px;
+     }
+
+     .selected {
+          background-size: 15px;
+     }
+
+     .element {
+          margin-left: 18%;
+     }
+
+     #grain {
+          margin-left: 22%;
+     }
+
+     #land {
+          margin-left: 4%;
+     }
+
+      #co2 {
+          margin-left: 9%;
+     }
+     #animal {
+          margin-left: 13%;
+     }
+
+     #info {
+     margin-right: 2%;
+     }
+     #source {
+     margin-left: 43%;
+     }
+}
+
